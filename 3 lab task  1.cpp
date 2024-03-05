@@ -11,7 +11,7 @@ bool VariableName(const string& a) {
 
 
     if (!(a[0] >= 'a' && a[0] <= 'z') && !(a[0] >= 'A' && a[0] <= 'Z') && a[0] != '_') {
-        cout << "Variable name must start with a letter or underscore"<<endl;
+        cout << "Variable name start with a letter or underscore"<<endl;
         return false;
     }
 
@@ -19,7 +19,7 @@ bool VariableName(const string& a) {
     for (char c : a) {
 
         if (!((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z') || (c >= '0' && c <= '9') || c == '_')) {
-            cout << "Invalid character in variable name: " << c << endl;
+            cout << " not valid character in variable name: " << c << endl;
             return false;
         }
     }
@@ -35,6 +35,7 @@ bool VariableName(const string& a) {
 }
 
 int main() {
+
     string input;
     cout << "Enter a variable name: ";
     cin >> input;
@@ -44,8 +45,8 @@ int main() {
     }
     else
     {
-        //cout<<"\n";
-        cout<< input << " is  not a valid variable name "<<endl;
+
+        cout<< input << " is  a  invalid variable name "<<endl;
     }
 }
 
