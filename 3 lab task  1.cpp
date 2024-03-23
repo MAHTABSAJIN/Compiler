@@ -1,4 +1,5 @@
 #include <iostream>
+#include<fstream>
 #include <string>
 using namespace std;
 
@@ -37,16 +38,18 @@ bool VariableName(const string& a) {
 int main() {
 
     string input;
-    cout << "Enter a variable name: ";
-    cin >> input;
+
+    fstream MyReadFile("filename.txt");
+    getline(MyReadFile,input);
 
     if (VariableName(input)) {
-        cout  << input << " is a valid variable name "<<endl;
+        cout  <<input << " is a valid variable name "<<endl;
     }
     else
     {
 
-        cout<< input << " is  a  invalid variable name "<<endl;
+        cout<<input << " is  a  invalid variable name "<<endl;
     }
+    return 0;
 }
 
